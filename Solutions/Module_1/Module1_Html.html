@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sunburn Goa Event Portal</title>
+
+    <!-- External CSS File -->
+
+    <link rel="stylesheet" href="Module1_CSS.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#events">Events</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Home Section -->
+
+    <section id="home" class="homeSection">
+
+        <div class="homeContent">
+
+            <h1 id="welcomeBanner">
+
+                Welcome to Sunburn Goa 2026
+
+            </h1>
+
+            <p class="highlight">
+
+                Experience music, lights, DJs and unforgettable nights.
+
+            </p>
+
+            <a href="#registration">
+
+                <button class="homeButton">
+
+                Register Now
+
+    </button>
+
+</a>
+
+        </div>
+
+        <!-- Home Image -->
+
+        <div class="homeImage">
+
+            <img src="images/home.jpg"
+                 alt="Sunburn Goa Event"
+                 ondblclick="enlargeImage(this)">
+
+        </div>
+
+    </section>
+
+    <!-- Events Section -->
+
+    <section id="events">
+
+        <h2>Event Promo Video</h2>
+
+        <!-- Video Section -->
+
+        <div class="videoSection">
+
+            <video width="700"
+                   controls
+                   oncanplay="videoReady()">
+
+                <source src="video/Sunburn.mp4"
+                        type="video/mp4">
+
+            </video>
+
+        </div>
+
+        <p id="videoMessage"></p>
+
+        <!-- Registration Form -->
+
+        <h2 id="registration">
+
+    Event Registration
+
+</h2>
+
+        <form>
+
+            <!-- Name -->
+
+            <input type="text"
+                   placeholder="Enter your name"
+                   required
+                   autofocus>
+
+            <!-- Email -->
+
+            <input type="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <!-- Phone Number -->
+
+            <input type="text"
+       id="phone"
+       placeholder="Enter phone number"
+       onblur="validatePhone()">
+
+<p id="phoneError"></p>
+            <!-- Event Date -->
+
+            <input type="date"
+                   required>
+
+            <!-- Event Selection -->
+
+            <select id="eventType"
+                    onchange="showFee()">
+
+                <option value="">Select Event</option>
+
+                <option value="2000">
+
+                    DJ Night
+
+                </option>
+
+                <option value="3500">
+
+                    VIP Pass
+
+                </option>
+
+                <option value="5000">
+
+                    Premium Lounge
+
+                </option>
+
+            </select>
+
+            <!-- Fee Display -->
+
+            <p id="fee"></p>
+
+            <!-- Register Button -->
+
+        <button type="submit"
+        onclick="registerUser()">
+
+        Register
+
+        </button>
+
+            <!-- Output Message -->
+
+            <output id="message"></output>
+
+            <!-- Feedback -->
+
+            <textarea
+                id="feedback"
+                placeholder="Enter feedback"
+                onkeyup="countCharacters()"></textarea>
+
+            <p>
+
+                Characters:
+                <span id="count">0</span>
+
+            </p>
+
+        </form>
+
+        <!-- Event Gallery -->
+
+        <h2>Sunburn Event Gallery</h2>
+
+        <table>
+
+            <tr>
+
+                <td>
+
+                    <img src="images/event1.jpg"
+                         alt="Event Image"
+                         title="Sunburn Event"
+                         class="eventImage"
+                         ondblclick="enlargeImage(this)">
+
+                    <p>Music Festival</p>
+
+                </td>
+
+                <td>
+
+                    <img src="images/event2.jpg"
+                         alt="Event Image"
+                         title="Sunburn Event"
+                         class="eventImage"
+                         ondblclick="enlargeImage(this)">
+
+                    <p>DJ Performance</p>
+
+                </td>
+
+                <td>
+
+                    <img src="images/event3.jpg"
+                         alt="Event Image"
+                         title="Sunburn Event"
+                         class="eventImage"
+                         ondblclick="enlargeImage(this)">
+
+                    <p>Night Lights</p>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <img src="images/event4.jpg"
+                         alt="Event Image"
+                         title="Sunburn Event"
+                         class="eventImage"
+                         ondblclick="enlargeImage(this)">
+
+                    <p>Live Concert</p>
+
+                </td>
+
+                <td>
+
+                    <img src="images/event5.jpg"
+                         alt="Event Image"
+                         title="Sunburn Event"
+                         class="eventImage"
+                         ondblclick="enlargeImage(this)">
+
+                    <p>Dance Arena</p>
+
+                </td>
+
+                <td>
+
+                    <img src="images/event6.jpg"
+                         alt="Event Image"
+                         title="Sunburn Event"
+                         class="eventImage"
+                        
+                         ondblclick="enlargeImage(this)">
+
+                    <p>Festival Crowd</p>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <!-- Location Section -->
+
+        <div class="locationSection">
+
+            <button onclick="findLocation()">
+
+                Find Nearby Events
+
+            </button>
+            <button onclick="clearPreferences()">
+
+         Clear Preferences
+
+        </button>
+
+            <p id="location"></p>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contactSection">
+
+        <h2>Contact Us</h2>
+
+        <p>
+
+            <b>Name:</b> Sunburn Goa Team
+
+        </p>
+
+        <p>
+
+            <b>Phone:</b> +91 9876543210
+
+        </p>
+
+        <p>
+
+            <b>Email:</b> sunburngoa@gmail.com
+
+        </p>
+
+    </section>
+    <script src="Module1_JS.js"></script>
+</body>
+
+</html>

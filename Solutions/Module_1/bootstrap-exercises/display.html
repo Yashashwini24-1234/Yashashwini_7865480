@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Display & Visibility</title>
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <h1 class="text-center text-primary mb-5">
+        Display & Visibility Utilities
+    </h1>
+
+    <!-- Visible on Tablets and Above -->
+
+    <div class="d-none d-md-block
+    bg-primary text-white p-4 rounded shadow mb-4">
+
+        <h3>
+            Tablet & Desktop Section
+        </h3>
+
+        <p>
+            This section is hidden on mobile devices
+            and visible on tablets and larger screens.
+        </p>
+
+    </div>
+
+    <!-- Flex on Large Screens -->
+
+    <div class="d-lg-flex
+    bg-success text-white p-4 rounded shadow mb-4">
+
+        <div class="me-4">
+
+            <h3>
+                Large Screen Flexbox
+            </h3>
+
+            <p>
+                Flex layout activates only on large screens.
+            </p>
+
+        </div>
+
+        <button class="btn btn-light mt-3 mt-lg-0">
+            Learn More
+        </button>
+
+    </div>
+
+    <!-- Responsive Sidebar -->
+
+    <div class="row mt-5">
+
+        <div class="col-md-3
+        d-none d-md-block">
+
+            <div class="bg-dark text-white
+            p-4 rounded shadow">
+
+                <h4>
+                    Sidebar
+                </h4>
+
+                <p>
+                    Visible only on tablets and larger screens.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-9">
+
+            <div class="bg-white p-4 rounded shadow">
+
+                <h4 class="text-primary">
+                    Main Content
+                </h4>
+
+                <p>
+                    Main content section beside responsive sidebar.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
