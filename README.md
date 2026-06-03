@@ -18,5 +18,4 @@ This repository contains all solutions, outputs, and exercises completed as part
 * GitHub
 
 ## Author
-
 Yashashwini
